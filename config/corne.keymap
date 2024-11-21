@@ -8,6 +8,10 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+#define ZRES LG(N0)
+#define ZIN LG(EQUAL)
+#define ZOUT LG(MINUS)
+
 / {
         keymap {
                 compatible = "zmk,keymap";
@@ -31,9 +35,9 @@
 
                 raise_layer {
                         bindings = <
-   &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT     &kp HOME &kp PG_DN  &kp PG_UP &kp END &trans &trans
-   &kp LCTRL &trans   &trans &trans   &trans   &kp LBKT      &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-   &kp LSHFT &trans   &trans &trans   &trans   &kp LBRC      &kp RBRC &kp PLUS  &kp LBRC  &kp RBRC &kp PIPE &kp TILDE
+   &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT     &kp HOME  &kp PG_DN  &kp PG_UP &kp END   &trans   &trans
+   &kp LCTRL &trans   &trans &trans   &trans   &kp LBKT      &kp LEFT  &kp DOWN   &kp UP    &kp RIGHT &trans   &trans
+   &kp LSHFT &trans   &trans &trans   &trans   &kp LBRC      &kp ZRESW &kp ZOUTW  &kp ZOUTW &kp RBRC  &kp PIPE &kp TILDE
                              &trans   &kp DEL  &trans        &trans    &trans    &kp K_MUTE
                         >;
                 };

@@ -53,12 +53,4 @@
                         >;
                 };
         };
-        behaviors {
-            lscsh: left_space_cadet_shift {}
-                compatible = "zmk,behavior-mod-morph";
-                #binding-cells = <0>;
-                bindings = <&mt LSHFT LPAR>, <&close_and_open_parens>;
-                mods = <(MOD_RSFT)>;
-            };
-        };
 };

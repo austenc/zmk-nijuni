@@ -18,6 +18,7 @@
 
 // Raise + Enter 
 #define RENT RAISE RET
+#define LBSP LOWER BSPC
 
 // Escape + Control
 #define ESCC LCTRL ESC
@@ -31,7 +32,6 @@
 // #define SARR MINUS GT
 // #define DARR EQUAL GT
 
-
 / {
         keymap {
                 compatible = "zmk,keymap";
@@ -43,9 +43,9 @@
 // | ------- | ------- | ------- | ------- | ------- | ------- |    | ------- | ------- | ------- | ------- | ------- | ------- |
     &kp ESCC    &kp A     &kp S     &kp D     &kp F     &kp G          &kp H     &kp J     &kp K     &kp L   &kp SEMI   &kp SQT
 // | ------- | ------- | ------- | ------- | ------- | ------- |    | ------- | ------- | ------- | ------- | ------- | ------- |
-    &mt LSHFT LPAR &kp Z &kp X &kp C &kp V &kp B  &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &mt LSHFT RPAR
+    &mt LSPO    &kp Z     &kp X     &kp C     &kp V     &kp B          &kp N     &kp M   &kp COMMA  &kp DOT   &kp FSLH  &mt RSPC
 // \ ------- | ------- | ------- | ------- | ------- | ------- |    | ------- | ------- | ------- | ------- | ------- | ------- /
-                                  &kp LALT &lt 1 BSPC &kp LGUI       &kp SPACE &lt RENT &mo 1
+                                  &kp LALT   &lt LBSP  &kp LGUI      &kp SPACE  &lt RENT  &mo LOWER
 //                               \ ------- | ------- | ------- /    \ ------- | ------- | ------- /
                         >;
                 };
@@ -59,7 +59,7 @@
 // | ------- | ------- | ------- | ------- | ------- | ------- |    | ------- | ------- | ------- | ------- | ------- | ------- |
       &trans    &trans    &trans    &trans    &trans   &kp LBRC       &kp RBRC   &kp N1    &kp N2    &kp N3    &trans   &kp K_VOL_DN
 // \ ------- | ------- | ------- | ------- | ------- | ------- |    | ------- | ------- | ------- | ------- | ------- | ------- /
-                               &trans  &trans  &trans                  &trans    &mo 2    &lt 1 N0
+                                   &trans    &trans    &trans         &trans    &mo 2     &lt 1 N0
 //                               \ ------- | ------- | ------- /    \ ------- | ------- | ------- /
                         >;
                 };
